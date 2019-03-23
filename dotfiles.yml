@@ -1,0 +1,4 @@
+- name: Set up my stuff
+  hosts: localhost
+  roles:
+    - { role: fish, tags: ["fish"] }

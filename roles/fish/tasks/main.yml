@@ -1,0 +1,35 @@
+---
+- include_vars: secrets.yml
+- name: install fish package
+  package:
+    name: fish
+    state: present
+  tags:
+    - install_fish
+- name: Change default shell to fish
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: "{{ fish_bin }}"
+  become: yes
+- name: Template in main config
+  template:
+    src: "{{ role_path }}/templates/config.fish"
+    dest: "{{ fish_conf }}/config.fish"
+    backup: yes
+    force: yes
+- name: copy additional configuration
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "{{ fish_conf }}"
+    backup: yes
+  with_items:
+    - fishfile
+    - conf.d
+- name: Install fisher if not present
+  get_url:
+    url: https://git.io/fisher
+    dest: "{{ fish_conf }}/functions/fisher.fish"
+- name: Install fishfile packages
+  shell: fisher
+  args:
+    executable: "{{ fish_bin }}"

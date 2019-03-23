@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Copy the ansible cfg into place
+echo "*** Copying Ansible Config"
+[[ -e ~/.ansible.cfg ]] && echo "Backing up old cfg" && cp ~/.ansible.cfg ~/.ansible.cfg.old;
+cp ansible.cfg ~/.ansible.cfg;
+
+echo "*** Checking for ansible"
+command -v ansible-playbook > /dev/null || { echo "Please install Ansible 2.4 or higher"; exit 1; }
+ANS_VER=$(ansible --version | head -n 1 | cut -d' ' -f 2)
+python check_ans_ver.py $ANS_VER || echo "Need Ansible >= 2.4, you have $ANS_VER"
+
+echo "*** Running the playbook"
+TAGS=""
+[[ -n "$@" ]] && echo "using tags $@" && TAGS="-t $@";
+CMD="ansible-playbook dotfiles.yml --vault-id @prompt -v -K ${TAGS}"
+echo ${CMD}
+${CMD}
