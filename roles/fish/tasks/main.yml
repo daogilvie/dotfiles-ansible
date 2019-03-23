@@ -3,9 +3,7 @@
 - name: install fish package
   package:
     name: fish
-    state: present
-  tags:
-    - install_fish
+    state: latest
 - name: Change default shell to fish
   user:
     name: "{{ ansible_user_id }}"

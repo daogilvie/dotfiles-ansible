@@ -1,0 +1,9 @@
+[core]
+	excludesfile = {{ global_ignore_path  }}
+[user]
+    name = Drum Ogilvie
+	email = me@daogilvie.com
+    useConfigOnly = true
+[push]
+	default = simple
+

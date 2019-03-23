@@ -1,4 +1,10 @@
 - name: Set up my stuff
   hosts: localhost
   roles:
-    - { role: fish, tags: ["fish"] }
+      - { role: fish, tags: [fish] }
+      - { role: cli, tags: [cli] }
+      - { role: git, tags: [git, cli] }
+      - { role: nvim, tags: [nvim, cli] }
+      - { role: pyenv, tags: [pyenv, cli] }
+      - { role: editorconfig, tags: [editorconfig] }
+      - { role: jupyter, tags: [jupyter] }

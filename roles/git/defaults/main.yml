@@ -1,0 +1,2 @@
+---
+global_ignore_path: "{{ ansible_env.HOME }}/.gitignore_global"

@@ -1,0 +1,15 @@
+---
+- name: install git
+  package:
+    name: git
+    state: latest
+- name: copy global gitignore file
+  copy:
+    src: "{{ role_path }}/files/gitignore_global"
+    dest: "{{ global_ignore_path }}"
+    force: false
+- name: template in config
+  template:
+    src: "{{ role_path }}/templates/gitconfig"
+    dest: "{{ ansible_env.HOME }}/.gitconfig"
+    force: false

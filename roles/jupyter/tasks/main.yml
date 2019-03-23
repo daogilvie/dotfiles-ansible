@@ -1,0 +1,9 @@
+- name: Install custom css
+  block:
+    - file:
+        path: "{{ jupyter_dir }}/custom"
+        state: directory
+    - copy:
+        src: "{{ role_path }}/files/custom.css"
+        dest: "{{ jupyter_dir }}/custom/custom.css"
+        force: true

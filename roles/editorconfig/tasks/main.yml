@@ -1,0 +1,5 @@
+- name: Set the root file
+  copy:
+    src: "{{ role_path }}/files/editorconfig"
+    dest: "{{ ansible_env.HOME }}/.editorconfig"
+    force: true

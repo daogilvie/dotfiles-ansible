@@ -21,8 +21,10 @@ set -g -x GOPATH ~/go
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
 # Invoke pyenv and  pyenv-virtualenv
-status --is-interactive; and source (pyenv init -|psub)
-status --is-interactive; and source (pyenv virtualenv-init -|psub)
+if command -sq pyenv
+    status --is-interactive; and source (pyenv init -|psub)
+    status --is-interactive; and source (pyenv virtualenv-init -|psub)
+end
 
 # Enable some options in bobthefish
 set -g theme_nerd_fonts yes

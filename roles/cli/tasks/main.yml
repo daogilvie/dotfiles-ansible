@@ -1,0 +1,13 @@
+---
+- name: install cli tools
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - exa
+    - ripgrep
+    - the_silver_searcher
+    - fzy
+    - jq
+    - entr
+    - boxes
