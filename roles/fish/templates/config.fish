@@ -41,6 +41,8 @@ eval (ssh-agent -c) > /dev/null ^ /dev/null
 gpg-agent --daemon > /dev/null ^ /dev/null
 set -gx GPG_TTY (tty)
 
+# We use -g not -U for fish user paths so that we can set it each time in conf
+
 # Add Cargo to path
 set -g fish_user_paths ~/.cargo/bin $fish_user_paths
 
