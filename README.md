@@ -1,9 +1,10 @@
 # Dotfiles
 
 This repo stores my dotfiles as Ansible roles (>2.4).
-It's a WIP!
 
 ## Installing
+
+Invoke using the `install.sh` script provided. Tags, if provided, should be comma-seperated.
 
 `./install.sh OPTIONAL_TAGS_FOR_ROLES`
 
