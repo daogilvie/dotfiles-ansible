@@ -1,7 +1,8 @@
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-# Set code as editor
-set -g -x EDITOR "code-insiders --wait"
+# Set nvim as editor
+set -g -x EDITOR nvim
+set -g -x VISUAL nvim
 
 # And less as pager
 set -g -x PAGER less
@@ -56,3 +57,6 @@ set -g fish_color_match -o --background=93A1A1 268bd2
 
 # Add sbin
 set -g fish_user_paths /usr/local/sbin $fish_user_paths
+
+# Enable VI mode bindings
+fish_vi_key_bindings
