@@ -12,8 +12,9 @@ Plug 'machakann/vim-highlightedyank'
 " Restrict modelines, not that I use them much
 Plug 'ciaranm/securemodelines'
 
-" Getting around is better with sneak
+" Getting around is better with sneak and easymotion
 Plug 'justinmk/vim-sneak'
+Plug 'easymotion/vim-easymotion'
 
 " Commenting is better with nerd commenter
 Plug 'scrooloose/nerdcommenter'
@@ -196,7 +197,7 @@ autocmd InsertLeave * set nopaste
 " Key Remaps
 " ----------
 
-let mapleader = ","
+let mapleader = "\<SPACE>"
 
 " Make myself learn the home row, arrow keys do nothing except
 " switch buffers in normal mode
