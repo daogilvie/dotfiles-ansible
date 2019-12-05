@@ -47,6 +47,10 @@ Plug 'ncm2/ncm2-path'
 Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'stephpy/vim-yaml'
+Plug 'pangloss/vim-javascript'
 
 " Editorconfig integration
 Plug 'editorconfig/editorconfig-vim'
@@ -84,19 +88,6 @@ if executable('rg')
 	set grepprg=rg\ --no-heading\ --vimgrep
 	set grepformat=%f:%l:%c:%m
 endif
-if executable('fzy')
-    function! FzyCommand(choice_command, vim_command)
-        try
-            let output = system(a:choice_command . " | fzy ")
-        catch /Vim:Interrupt/
-            " Swallow errors from ^C, allow redraw! below
-        endtry
-        redraw!
-        if v:shell_error == 0 && !empty(output)
-            exec a:vim_command . ' ' . output
-        endif
-    endfunction
-endif
 
 " Don't need backups and swaps
 set nobackup
@@ -111,6 +102,7 @@ set undofile
 " Completion settings taken from jonhoo
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
+
 " tab to select
 " and don't hijack my enter key
 inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>":"\<C-y>"):"\<Tab>")
@@ -119,7 +111,7 @@ inoremap <expr><CR> (pumvisible()?(empty(v:completed_item)?"\<CR>\<CR>":"\<C-y>"
 " Lang server, taken from jonhoo
 let g:LanguageClient_settingsPath = "~/.config/nvim/langclient.json"
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['env', 'CARGO_TARGET_DIR=/data/jon/cargo-target/rls', 'rls'],
+    \ 'rust': ['rls'],
     \ }
 let g:LanguageClient_autoStart = 1
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
@@ -154,6 +146,10 @@ set incsearch
 " Backspace no longer fears the newline!
 set backspace=2
 
+" Folding via syntax files, and everything 3 layers in is folded
+set foldmethod=syntax
+set foldlevel=3
+
 " Jonhoo's Rg config
 let g:fzf_layout = { 'down': '~20%' }
 command! -bang -nargs=* Rg
@@ -167,11 +163,6 @@ function! s:list_cmd()
   let base = fnamemodify(expand('%'), ':h:.:S')
   return base == '.' ? 'fd --type file --follow' : printf('fd --type file --follow | proximity-sort %s', expand('%'))
 endfunction
-
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
-  \                               'options': '--tiebreak=index'}, <bang>0)
-
 
 " Status bar!
 set laststatus=2
@@ -192,6 +183,9 @@ augroup END
 
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
+
+" Add ** to path to let find use sub-directories
+set path+=**
 
 " ----------
 " Key Remaps
@@ -215,6 +209,9 @@ nmap <leader>w :w<CR>
 
 " quick search with rg
 noremap <leader>s :Rg
+
+" Go To File type behaviour
+map <C-p> :Files<CR>
 
 " ESC is too far, it turns out
 inoremap <C-j> <Esc>

@@ -7,6 +7,23 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+## [2019.12]
+
+### Added
+
+- neovim: path setting to enable built-in recursive find
+- neovim: plugins for various additional syntax types
+- neovim: setting for default 3-deep fold
+- neovim: C-P mapping for Files command
+
+### Removed
+
+- neovim: Unneeded Files command spec.
+
+### Fixed
+
+- neovim: CARGO_TARGET_DIR removed, I didn't fix it when copying from jonhoo
+
 ## [2019.11]
 
 ### Changed
@@ -20,5 +37,6 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - Initial tagged version
 
 [unreleased]: https://github.com/daogilvie/dotfiles/compare/v2019.11...HEAD
+[2019.12]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.12
 [2019.11]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.11
 [2019.09]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.09
