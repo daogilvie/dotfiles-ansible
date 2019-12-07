@@ -15,6 +15,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Changed
 
 - ansible: swap to `loop` from `with_items` (now need >= 2.5)
+- fish: swap to starship prompt
 ## [2019.12]
 
 ### Added

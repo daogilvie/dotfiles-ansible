@@ -27,13 +27,8 @@ if command -sq pyenv
     status --is-interactive; and source (pyenv virtualenv-init -|psub)
 end
 
-# Enable some options in bobthefish
-set -g theme_nerd_fonts yes
-set -g theme_display_hg yes
-set -g theme_newline_cursor yes
-set -g theme_color_scheme solarized-dark
-set -g theme_display_virtualenv yes
-set -g theme_display_docker_machine yes
+# Activate starship prompt
+starship init fish | source
 
 # SSH Agent
 eval (ssh-agent -c) > /dev/null ^ /dev/null

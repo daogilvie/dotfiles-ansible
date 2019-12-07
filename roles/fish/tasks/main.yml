@@ -1,9 +1,12 @@
 ---
 - include_vars: secrets.yml
-- name: install fish package
+- name: install fish and starship
   package:
-    name: fish
+    name: "{{ item }}"
     state: latest
+  loop:
+    - fish
+    - starship
 - name: Change default shell to fish
   user:
     name: "{{ ansible_user_id }}"
