@@ -16,6 +16,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - ansible: swap to `loop` from `with_items` (now need >= 2.5)
 - fish: swap to starship prompt
+- install: Cows now opt-in
+
 ## [2019.12]
 
 ### Added
