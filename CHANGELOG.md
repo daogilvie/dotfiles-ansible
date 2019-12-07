@@ -7,6 +7,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+## [2019.12.2]
 
 ### Added
 
@@ -48,6 +49,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - Initial tagged version
 
 [unreleased]: https://github.com/daogilvie/dotfiles/compare/v2019.11...HEAD
+[2019.12.2]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.12.2
 [2019.12]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.12
 [2019.11]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.11
 [2019.09]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.09
