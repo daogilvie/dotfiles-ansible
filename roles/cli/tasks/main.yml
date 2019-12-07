@@ -3,7 +3,7 @@
   package:
     name: "{{ item }}"
     state: latest
-  with_items:
+  loop:
     - exa
     - ripgrep
     - the_silver_searcher
