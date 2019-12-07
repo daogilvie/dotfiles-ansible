@@ -11,3 +11,5 @@
     - jq
     - entr
     - boxes
+    - ranger
+    - fzf

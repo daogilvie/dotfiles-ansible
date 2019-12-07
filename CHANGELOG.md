@@ -8,6 +8,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ## [Unreleased]
 
 
+### Added
+
+- cli: fzf and ranger added to install list
+
 ### Changed
 
 - ansible: swap to `loop` from `with_items` (now need >= 2.5)
