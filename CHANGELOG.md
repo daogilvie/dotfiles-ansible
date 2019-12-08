@@ -7,6 +7,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- neovim: Move Files to leader--f to free C-p for word completion
+
 ## [2019.12.2]
 
 ### Added

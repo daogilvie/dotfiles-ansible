@@ -209,9 +209,7 @@ nmap <leader>w :w<CR>
 
 " quick search with rg
 noremap <leader>s :Rg
-
-" Go To File type behaviour
-map <C-p> :Files<CR>
+noremap <leader>f :Files<CR>
 
 " ESC is too far, it turns out
 inoremap <C-j> <Esc>
