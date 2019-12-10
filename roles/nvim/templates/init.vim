@@ -52,6 +52,9 @@ Plug 'plasticboy/vim-markdown'
 Plug 'stephpy/vim-yaml'
 Plug 'pangloss/vim-javascript'
 
+" Git Gutter
+Plug 'airblade/vim-gitgutter'
+
 " Editorconfig integration
 Plug 'editorconfig/editorconfig-vim'
 
@@ -78,6 +81,9 @@ let g:ale_lint_on_enter = 0
 let g:ale_rust_cargo_use_check = 1
 let g:ale_rust_cargo_check_all_targets = 1
 let g:ale_virtualtext_cursor = 0
+
+" Vim gutter settings
+set updatetime=100
 
 " from https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.vim
 " which cites http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/

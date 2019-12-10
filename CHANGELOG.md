@@ -9,7 +9,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Changed
 
-- neovim: Move Files to leader--f to free C-p for word completion
+- neovim: fove Files to leader--f to free C-p for word completion
+- neovim: add git-gutter plug and setting
 
 ## [2019.12.2]
 
