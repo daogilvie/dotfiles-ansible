@@ -215,10 +215,10 @@ nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
 " Write quickly
-nmap <leader>w :w<CR>
+noremap <leader>w :w<CR>
 
 " quick search with rg
-noremap <leader>s :Rg
+noremap <leader>s :Rg<CR>
 noremap <leader>f :Files<CR>
 
 " ESC is too far, it turns out
