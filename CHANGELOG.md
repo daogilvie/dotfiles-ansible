@@ -9,6 +9,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Changed
 
+- neovim: Add lightline-ale and some config
 - neovim: leader>w now fixed, leader>s now also sends <CR>
 - neovim: nnoremap swap ; and : for simple ex-commands
 - neovim: move Files to leader--f to free C-p for word completion

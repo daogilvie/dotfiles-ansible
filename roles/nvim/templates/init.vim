@@ -25,6 +25,7 @@ Plug 'airblade/vim-rooter'
 " Add a statusline - I use a powerline-ish theme in terminal, but don't want
 " to install powerline proper. Lightline seems good.
 Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
 
 " FZF integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -74,13 +75,8 @@ let g:python_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim2/bin/py
 let g:python3_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim3/bin/python'
 " Lint settings
 let g:ale_sign_column_always = 1
-" only lint on save
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_save = 0
-let g:ale_lint_on_enter = 0
 let g:ale_rust_cargo_use_check = 1
 let g:ale_rust_cargo_check_all_targets = 1
-let g:ale_virtualtext_cursor = 0
 
 " Vim gutter settings
 set updatetime=100
@@ -179,6 +175,20 @@ set laststatus=2
 let g:lightline = {
   \ 'colorscheme': 'dracula'
   \}
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ }
+let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+
 set noshowmode
 " Some autocommand stuff
 "
