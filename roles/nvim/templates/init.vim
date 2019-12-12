@@ -221,8 +221,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-nnoremap <left> :bp<CR>
-nnoremap <right> :bn<CR>
 
 " Write quickly
 noremap <leader>w :w<CR>
