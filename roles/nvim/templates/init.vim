@@ -156,6 +156,9 @@ set backspace=2
 set foldmethod=syntax
 set foldlevel=3
 
+" Splits open down and to the right, the opposites of defaults
+set splitbelow splitright
+
 " Jonhoo's Rg config
 let g:fzf_layout = { 'down': '~20%' }
 command! -bang -nargs=* Rg

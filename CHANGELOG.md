@@ -7,14 +7,21 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- neovim: Add lightline-ale and some config
+- neovim: add git-gutter plug and setting
+
 ### Changed
 
-- neovim: Remove bn and bp keymaps as they conflict with iterm 
-- neovim: Add lightline-ale and some config
 - neovim: leader>w now fixed, leader>s now also sends <CR>
-- neovim: nnoremap swap ; and : for simple ex-commands
 - neovim: move Files to leader--f to free C-p for word completion
-- neovim: add git-gutter plug and setting
+- neovim: nnoremap swap ; and : for simple ex-commands
+- neovim: Splits now open below and right
+
+### Removed
+
+- neovim: Remove bn and bp keymaps as they conflict with iterm 
 
 ## [2019.12.2]
 
