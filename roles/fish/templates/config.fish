@@ -27,6 +27,11 @@ if command -sq pyenv
     status --is-interactive; and source (pyenv virtualenv-init -|psub)
 end
 
+# Hook direnv if present
+if command -sq direnv
+    direnv hook fish | source
+end
+
 # Activate starship prompt
 starship init fish | source
 
