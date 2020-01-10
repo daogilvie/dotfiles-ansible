@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repo stores my dotfiles as Ansible roles (>2.4).
+This repo stores my dotfiles as Ansible roles (>2.5).
 
 ## Installing
 
