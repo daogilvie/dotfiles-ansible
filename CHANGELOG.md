@@ -7,6 +7,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+## [2020.01]
+
 ### Added
 
 - neovim: add initial ALEFix integration
@@ -67,7 +69,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - Initial tagged version
 
-[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2019.11...HEAD
+[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2020.01...HEAD
+[2020.01]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.01
 [2019.12.2]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.12.2
 [2019.12]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.12
 [2019.11]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.11
