@@ -19,6 +19,9 @@ Plug 'easymotion/vim-easymotion'
 " Commenting is better with nerd commenter
 Plug 'scrooloose/nerdcommenter'
 
+" And trees are better with nerdtree
+Plug 'scrooloose/nerdtree'
+
 " Use rooter to identify project roots for relative paths
 Plug 'airblade/vim-rooter'
 
