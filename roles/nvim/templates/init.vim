@@ -83,6 +83,11 @@ let g:ale_sign_column_always = 1
 let g:ale_rust_cargo_use_check = 1
 let g:ale_rust_cargo_check_all_targets = 1
 
+" Set up ALE fixers
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
 " Vim gutter settings
 set updatetime=100
 
@@ -239,6 +244,9 @@ noremap <leader>g :G<CR>
 
 " ESC is too far, it turns out
 inoremap <C-j> <Esc>
+
+" Get a shortcut for fixers
+nmap <leader>f <Plug>(ale_fix)
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>

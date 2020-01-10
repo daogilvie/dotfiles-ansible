@@ -9,6 +9,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Added
 
+- neovim: add initial ALEFix integration
 - neovim: add fugitive plug
 - neovim: add nerdtree
 - neovim: add lightline-ale and some config
