@@ -56,8 +56,9 @@ Plug 'plasticboy/vim-markdown'
 Plug 'stephpy/vim-yaml'
 Plug 'pangloss/vim-javascript'
 
-" Git Gutter
+" Git stuff
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " Editorconfig integration
 Plug 'editorconfig/editorconfig-vim'
@@ -76,6 +77,7 @@ color dracula
 " Python configuration
 let g:python_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim3/bin/python'
+
 " Lint settings
 let g:ale_sign_column_always = 1
 let g:ale_rust_cargo_use_check = 1
@@ -233,7 +235,10 @@ noremap <leader>w :w<CR>
 
 " quick search with rg
 noremap <leader>s :Rg<CR>
-noremap <leader>f :Files<CR>
+noremap <leader>p :Files<CR>
+
+" Quick access to the fugitive screen
+noremap <leader>g :G<CR>
 
 " ESC is too far, it turns out
 inoremap <C-j> <Esc>
