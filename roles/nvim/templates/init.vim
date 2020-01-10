@@ -121,13 +121,6 @@ let g:LanguageClient_serverCommands = {
     \ 'rust': ['rls'],
     \ }
 let g:LanguageClient_autoStart = 1
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-
-" Remap : <-> ; to make ex commands easier
-nnoremap : ;
-nnoremap ; :
 
 " Wildmenu settings
 set wildmenu
@@ -233,7 +226,11 @@ inoremap <right> <nop>
 " Write quickly
 noremap <leader>w :w<CR>
 
-" quick search with rg
+" Remap : <-> ; to make ex commands easier
+nnoremap : ;
+nnoremap ; :
+
+" quick search with rg and Files
 noremap <leader>s :Rg<CR>
 noremap <leader>p :Files<CR>
 
@@ -242,3 +239,9 @@ noremap <leader>g :G<CR>
 
 " ESC is too far, it turns out
 inoremap <C-j> <Esc>
+
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+nnoremap <leader>r :call LanguageClient_textDocument_documentSymbol()<CR>
+
