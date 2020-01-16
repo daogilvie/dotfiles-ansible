@@ -7,6 +7,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- neovim: Asciidoctor plugin and example settings
+
 ## [2020.01]
 
 ### Added
