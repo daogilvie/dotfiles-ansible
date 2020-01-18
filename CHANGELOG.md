@@ -10,6 +10,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Changed
 
 - neovim: Swap ncm for coc
+- neovim: Tweaks to sneak and nerdtree
 
 ### Added
 

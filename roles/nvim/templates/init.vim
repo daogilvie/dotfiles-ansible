@@ -259,6 +259,9 @@ autocmd InsertLeave * set nopaste
 " Add ** to path to let find use sub-directories
 set path+=**
 
+" Clever repeat sneaks
+let g:sneak#s_next = 1
+
 " ----------
 " Key Remaps
 " ----------
@@ -321,3 +324,5 @@ inoremap <silent><expr> <c-space> coc#refresh()
 nmap <silent> gpe <Plug>(ale_previous_wrap)
 nmap <silent> gne <Plug>(ale_next_wrap)
 
+" Nerd Tree toggle
+nnoremap <leader>t :NERDTreeToggle<CR>
