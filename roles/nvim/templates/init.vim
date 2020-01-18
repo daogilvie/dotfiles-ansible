@@ -41,11 +41,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ } "
 Plug 'Shougo/echodoc.vim' " show docs in the bottom area
-Plug 'ncm2/ncm2' " completions with ncm2 and some sources
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-path'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Language specific things
 Plug 'dag/vim-fish'
@@ -112,21 +108,39 @@ set autoread
 set undodir=~/.vimdid
 set undofile
 
-" Completion settings taken from jonhoo
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
+" Add more room for cmd message displays
+set cmdheight=2
 
-" tab to select
-" and don't hijack my enter key
-inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>":"\<C-y>"):"\<Tab>")
-inoremap <expr><CR> (pumvisible()?(empty(v:completed_item)?"\<CR>\<CR>":"\<C-y>"):"\<CR>")
+" And make the messages shorter
+set shortmess+=c
 
-" Lang server, taken from jonhoo
-let g:LanguageClient_settingsPath = "~/.config/nvim/langclient.json"
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rls'],
-    \ }
-let g:LanguageClient_autoStart = 1
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Not sure about this?
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" This is to 'accept' the completion
+inoremap <expr><CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Wildmenu settings
 set wildmenu
@@ -201,7 +215,14 @@ endfunction
 " Status bar!
 set laststatus=2
 let g:lightline = {
-  \ 'colorscheme': 'dracula'
+  \ 'colorscheme': 'dracula',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'cocstatus': 'coc#status'
+  \ },
   \}
 let g:lightline.component_expand = {
       \  'linter_checking': 'lightline#ale#checking',
@@ -216,6 +237,9 @@ let g:lightline.component_type = {
       \     'linter_ok': 'left',
       \ }
 let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+
+" Use auocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 set noshowmode
 " Some autocommand stuff
@@ -270,8 +294,30 @@ inoremap <C-j> <Esc>
 " Get a shortcut for fixers
 nmap <leader>f <Plug>(ale_fix)
 
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-nnoremap <leader>r :call LanguageClient_textDocument_documentSymbol()<CR>
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> <leader>r  :<C-u>CocList -I symbols<cr>
+
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" ALE quick jumps
+nmap <silent> gpe <Plug>(ale_previous_wrap)
+nmap <silent> gne <Plug>(ale_next_wrap)
 

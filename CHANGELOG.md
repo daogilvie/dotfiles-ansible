@@ -7,6 +7,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- neovim: Swap ncm for coc
+
 ### Added
 
 - neovim: Asciidoctor plugin and example settings
