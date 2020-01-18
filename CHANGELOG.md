@@ -9,6 +9,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Changed
 
+- fish: update fishfile
 - neovim: Swap ncm for coc
 - neovim: Tweaks to sneak and nerdtree
 
