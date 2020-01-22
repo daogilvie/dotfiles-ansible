@@ -12,6 +12,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - fish: update fishfile
 - neovim: Swap ncm for coc
 - neovim: Tweaks to sneak and nerdtree
+- neovim: Plugged will auto-install if not present
 
 ### Added
 
