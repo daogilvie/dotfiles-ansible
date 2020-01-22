@@ -231,12 +231,30 @@ let g:lightline = {
   \ 'colorscheme': 'dracula',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+  \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ],
+  \   'right': [ [ 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+  \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ]] 
   \ },
   \ 'component_function': {
   \   'cocstatus': 'coc#status'
   \ },
+  \ 'mode_map': {
+  \ 'n' : 'N',
+  \ 'i' : 'I',
+  \ 'R' : 'R',
+  \ 'v' : 'V',
+  \ 'V' : 'VL',
+  \ "\<C-v>": 'VB',
+  \ 'c' : 'C',
+  \ 's' : 'S',
+  \ 'S' : 'SL',
+  \ "\<C-s>": 'SB',
+  \ 't': 'T',
+  \ },
   \}
+
 let g:lightline.component_expand = {
       \  'linter_checking': 'lightline#ale#checking',
       \  'linter_warnings': 'lightline#ale#warnings',
@@ -249,7 +267,6 @@ let g:lightline.component_type = {
       \     'linter_errors': 'error',
       \     'linter_ok': 'left',
       \ }
-let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
 
 " Use auocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
