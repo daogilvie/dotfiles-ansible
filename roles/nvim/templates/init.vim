@@ -346,7 +346,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nnoremap <silent> <leader>r  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>R  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>r  :<C-u>CocList outline<cr>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 
