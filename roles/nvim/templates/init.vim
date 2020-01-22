@@ -56,6 +56,7 @@ Plug 'cespare/vim-toml'
 Plug 'godlygeek/tabular'
 Plug 'gabrielelana/vim-markdown'
 Plug 'stephpy/vim-yaml'
+Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pangloss/vim-javascript'
 Plug 'habamax/vim-asciidoctor'
 

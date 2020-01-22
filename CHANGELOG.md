@@ -18,6 +18,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Added
 
 - neovim: Asciidoctor plugin and example settings
+- neovim: Yaml fold plugin
 
 ## [2020.01]
 
