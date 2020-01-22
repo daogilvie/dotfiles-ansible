@@ -14,9 +14,12 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Tweaks to sneak and nerdtree
 - neovim: Plugged will auto-install if not present
 - neovim: Swap plasticboy->gabrielelana for markdown
+- neovim: consolidate and add to lightline config
+- neovim: Add R and r nuance for coc symbol search
 
 ### Added
 
+- neovim: tpope/vim-surround plugin
 - neovim: Asciidoctor plugin and example settings
 - neovim: Yaml fold plugin
 

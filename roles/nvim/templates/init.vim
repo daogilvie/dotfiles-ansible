@@ -22,6 +22,9 @@ Plug 'ciaranm/securemodelines'
 Plug 'justinmk/vim-sneak'
 Plug 'easymotion/vim-easymotion'
 
+" Convenience for changing surrounds
+Plug 'tpope/vim-surround'
+
 " Commenting is better with nerd commenter
 Plug 'scrooloose/nerdcommenter'
 
@@ -69,6 +72,9 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Dracula mode
 Plug 'dracula/vim', { 'as': 'dracula' }
+
+" Sessions made simple
+Plug 'tpope/vim-obsession'
 
 call plug#end() " And plugins are done now!
 
