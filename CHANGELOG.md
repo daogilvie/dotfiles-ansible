@@ -13,6 +13,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Swap ncm for coc
 - neovim: Tweaks to sneak and nerdtree
 - neovim: Plugged will auto-install if not present
+- neovim: Swap plasticboy->gabrielelana for markdown
 
 ### Added
 
