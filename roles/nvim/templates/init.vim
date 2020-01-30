@@ -129,6 +129,9 @@ set cmdheight=2
 
 " And make the messages shorter
 set shortmess+=c
+ 
+" Spelling stuff
+set spelllang=en_gb
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

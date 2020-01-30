@@ -18,6 +18,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Add R and r nuance for coc symbol search
 - neovim: Add surround plugin
 - neovim: NerdCommenter space delimiter added
+- neovim: Set spelllang to en_gb
 
 ### Added
 
