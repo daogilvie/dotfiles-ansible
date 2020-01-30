@@ -16,6 +16,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Swap plasticboy->gabrielelana for markdown
 - neovim: consolidate and add to lightline config
 - neovim: Add R and r nuance for coc symbol search
+- neovim: Add surround plugin
+- neovim: NerdCommenter space delimiter added
 
 ### Added
 

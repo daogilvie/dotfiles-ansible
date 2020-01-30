@@ -98,6 +98,9 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 
+" Add a space to comments
+let NERDSpaceDelims=1
+
 " Vim gutter settings
 set updatetime=100
 
