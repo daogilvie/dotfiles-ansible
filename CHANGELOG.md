@@ -20,6 +20,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: NerdCommenter space delimiter added
 - neovim: Set spelllang to en_gb
 - neovim: Change wildmenu to move onto longest match
+- neovim: Modify lightline elements to include git branch
 
 ### Added
 

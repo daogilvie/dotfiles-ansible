@@ -237,14 +237,15 @@ let g:lightline = {
   \ 'colorscheme': 'dracula',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ],
+  \             [ 'gitbranch', 'cocstatus', 'readonly', 'filename', 'modified' ] ],
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
   \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
-  \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ]] 
+  \              [ 'fileencoding', 'filetype' ]] 
   \ },
   \ 'component_function': {
-  \   'cocstatus': 'coc#status'
+  \   'cocstatus': 'coc#status',
+  \   'gitbranch': 'fugitive#head'
   \ },
   \ 'mode_map': {
   \ 'n' : 'N',
