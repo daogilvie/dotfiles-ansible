@@ -163,7 +163,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Wildmenu settings
 set wildmenu
-set wildmode=list:longest
+set wildmode=list:longest,full
 set wildignore=.hg,.svn,*~,*.png,*.jpg,*.gif,*.settings,Thumbs.db,*.min.js,*.swp,publish/*,intermediate/*,*.o,*.hi,Zend,vendor
 
 " Defaults are spaces not tabs, editorconfig can override these
