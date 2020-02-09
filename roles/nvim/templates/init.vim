@@ -237,7 +237,7 @@ let g:lightline = {
   \ 'colorscheme': 'dracula',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'cocstatus', 'readonly', 'filename', 'modified' ] ],
+  \             [ 'gitbranch', 'cocstatus', 'readonly', 'relativepath', 'modified' ] ],
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
   \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
