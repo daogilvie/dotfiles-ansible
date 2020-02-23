@@ -18,7 +18,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: consolidate and add to lightline config
 - neovim: Add R and r nuance for coc symbol search
 - neovim: Add surround plugin
-- neovim: NerdCommenter space delimiter added
+- neovim: NerdCommenter configuration added
 - neovim: Set spelllang to en_gb
 - neovim: Change wildmenu to move onto longest match
 - neovim: Modify lightline elements to include git branch
