@@ -28,6 +28,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: tpope/vim-surround plugin
 - neovim: Asciidoctor plugin and example settings
 - neovim: Yaml fold plugin
+- git: Add Session.vim to global ignore
 
 ## [2020.01]
 
