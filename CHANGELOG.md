@@ -29,6 +29,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Asciidoctor plugin and example settings
 - neovim: Yaml fold plugin
 - git: Add Session.vim to global ignore
+- fish: Add nvses abbreviation
 
 ## [2020.01]
 

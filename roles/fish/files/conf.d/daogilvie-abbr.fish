@@ -13,4 +13,5 @@ if command -v nvim >/dev/null
     abbr -a e 'nvim'
     abbr -a vim 'nvim'
     abbr -a vdiff 'nvim --diff'
+    abbr -a nvses 'nvim -S Session.vim'
 end
