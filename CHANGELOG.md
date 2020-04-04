@@ -30,6 +30,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Yaml fold plugin
 - neovim: colorcolumn at 80
 - git: Add Session.vim to global ignore
+- git: Add publish alias
 - fish: Add nvses abbreviation
 
 ## [2020.01]

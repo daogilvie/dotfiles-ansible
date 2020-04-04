@@ -8,3 +8,5 @@
 	default = simple
 [merge]
 	conflictStyle = diff3
+[alias]
+	publish = push -u origin HEAD
