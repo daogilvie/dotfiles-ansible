@@ -302,6 +302,9 @@ set path+=**
 " Clever repeat sneaks
 let g:sneak#s_next = 1
 
+" Visual ruler
+set colorcolumn=80
+
 " ----------
 " Key Remaps
 " ----------

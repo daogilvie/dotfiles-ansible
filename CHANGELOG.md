@@ -28,6 +28,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: tpope/vim-surround plugin
 - neovim: Asciidoctor plugin and example settings
 - neovim: Yaml fold plugin
+- neovim: colorcolumn at 80
 - git: Add Session.vim to global ignore
 - fish: Add nvses abbreviation
 
