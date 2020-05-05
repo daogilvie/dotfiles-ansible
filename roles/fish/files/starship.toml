@@ -1,0 +1,4 @@
+# Starship config! 
+[package]
+symbol = "🎁 "
+display_private = true

@@ -26,6 +26,12 @@
   loop:
     - fishfile
     - conf.d
+- name: copy in starship config
+  copy:
+    src: "{{ role_path }}/files/starship.toml"
+    dest: "{{ ansible_env.HOME }}/.config/starship.toml"
+    backup: yes
+    force: yes
 - name: Install fisher if not present
   get_url:
     url: https://git.io/fisher
