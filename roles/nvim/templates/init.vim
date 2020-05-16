@@ -51,6 +51,8 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ } "
 Plug 'Shougo/echodoc.vim' " show docs in the bottom area
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Language specific things
 Plug 'dag/vim-fish'
@@ -278,8 +280,16 @@ let g:lightline.component_type = {
       \     'linter_ok': 'left',
       \ }
 
-" Use auocmd to force lightline update.
+" Use autocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Split window when editing snippets
+let g:UltiSnipsEditSplit="vertical"
 
 set noshowmode
 " Some autocommand stuff

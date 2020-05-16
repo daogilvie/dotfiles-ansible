@@ -8,6 +8,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ## Unreleased
 
 - fish: Starship config file added
+- neovim: Add ultisnips and vim-snippets
 
 ## [2020.04]
 
