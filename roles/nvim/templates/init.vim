@@ -337,7 +337,13 @@ noremap <leader>w :w<CR>
 nnoremap : ;
 nnoremap ; :
 
-" quick search with rg and Files
+" Quick window movement
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+" Quick search with rg and Files
 noremap <leader>s :Rg<CR>
 noremap <leader>p :Files<CR>
 
