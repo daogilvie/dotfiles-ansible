@@ -72,8 +72,8 @@ Plug 'tpope/vim-fugitive'
 " Editorconfig integration
 Plug 'editorconfig/editorconfig-vim'
 
-" Dracula mode
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Color theme: Nord  mode
+Plug 'arcticicestudio/nord-vim'
 
 " Sessions made simple
 Plug 'tpope/vim-obsession'
@@ -84,7 +84,7 @@ call plug#end() " And plugins are done now!
 syntax enable
 filetype plugin indent on
 filetype plugin on
-color dracula
+colorscheme nord
 
 " Python configuration
 let g:python_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim2/bin/python'
@@ -239,7 +239,7 @@ endfunction
 " Status bar!
 set laststatus=2
 let g:lightline = {
-  \ 'colorscheme': 'dracula',
+  \ 'colorscheme': 'nord',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'cocstatus', 'readonly', 'relativepath', 'modified' ] ],
