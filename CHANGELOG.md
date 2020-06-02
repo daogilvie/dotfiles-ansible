@@ -8,6 +8,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ## Unreleased
 
 - fish: Starship config file added
+- neovim: Introduce FastFold to for performance 
 - neovim: Swap to Nord theme
 - neovim: Add ultisnips and vim-snippets
 - neovim: Add window switch movement
