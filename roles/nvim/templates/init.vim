@@ -99,6 +99,11 @@ let g:ale_rust_cargo_check_all_targets = 1
 " Set up ALE fixers
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'rust': ['rustfmt'],
+\   'html': ['prettier'],
+\   'markdown': ['prettier'],
+\   'javascript': ['prettier'],
+\   'typescript': ['prettier']
 \}
 
 " Customise nerd commenter
