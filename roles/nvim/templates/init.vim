@@ -65,6 +65,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pangloss/vim-javascript'
 Plug 'habamax/vim-asciidoctor'
+Plug 'iloginow/vim-stylus'
 
 " Git stuff
 Plug 'airblade/vim-gitgutter'
