@@ -15,6 +15,6 @@
   template:
     src: "{{ role_path }}/templates/init.vim"
     dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
-    force: no
-- name: run PlugInstall
-  shell: nvim --headless +PlugInstall +qa
+    backup: yes
+- name: run PlugInstall and PlugUpdate
+  shell: nvim --headless +PlugInstall +PlugUpdate +qa
