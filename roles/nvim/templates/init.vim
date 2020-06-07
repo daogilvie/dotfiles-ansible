@@ -88,8 +88,10 @@ filetype plugin indent on
 filetype plugin on
 colorscheme nord
 
-" Python configuration
-let g:python_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim2/bin/python'
+" Provider configuration
+let g:loaded_ruby_provider = 0
+let g:loaded_perl_provider = 0
+let g:loaded_python_provider = 0 " disables python 2
 let g:python3_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim3/bin/python'
 
 " Lint settings
