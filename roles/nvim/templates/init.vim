@@ -34,6 +34,9 @@ Plug 'scrooloose/nerdtree'
 " Use rooter to identify project roots for relative paths
 Plug 'airblade/vim-rooter'
 
+" Mission critical Emojis
+Plug 'junegunn/vim-emoji'
+
 " Add a statusline - I use a powerline-ish theme in terminal, but don't want
 " to install powerline proper. Lightline seems good.
 Plug 'itchyny/lightline.vim'
@@ -340,6 +343,9 @@ let g:sneak#s_next = 1
 
 " Visual ruler
 set colorcolumn=80
+
+" Gimme them sweet sweet emojis
+set completefunc=emoji#complete
 
 " ----------
 " Key Remaps
