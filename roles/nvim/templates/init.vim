@@ -324,9 +324,6 @@ let g:sneak#s_next = 1
 " Visual ruler
 set colorcolumn=80
 
-" Gimme them sweet sweet emojis
-set completefunc=emoji#complete
-
 " ----------
 " Key Remaps
 " ----------
@@ -411,3 +408,6 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Fast fold
 nmap zuz <Plug>(FastFoldUpdate)
+
+" Emojify
+nnoremap <leader>el :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
