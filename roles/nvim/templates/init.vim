@@ -40,14 +40,12 @@ Plug 'junegunn/vim-emoji'
 " Add a statusline - I use a powerline-ish theme in terminal, but don't want
 " to install powerline proper. Lightline seems good.
 Plug 'itchyny/lightline.vim'
-Plug 'maximbaz/lightline-ale'
 
 " FZF integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Enable various language server, completion and linting integrations
-Plug 'w0rp/ale' " asynchronous lints with ale
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -97,26 +95,14 @@ let g:loaded_perl_provider = 0
 let g:loaded_python_provider = 0 " disables python 2
 let g:python3_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim3/bin/python'
 
-" Lint settings
-let g:ale_sign_column_always = 1
-let g:ale_rust_cargo_use_check = 1
-let g:ale_rust_cargo_check_all_targets = 1
-
-" Set up ALE fixers
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'rust': ['rustfmt'],
-\   'html': ['prettier'],
-\   'markdown': ['prettier'],
-\   'javascript': ['prettier'],
-\   'typescript': ['prettier']
-\}
-
 " Customise nerd commenter
 let g:NERDSpaceDelims=1
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDCommentEmptyLines = 1
+
+" Emoji completion
+set completefunc=emoji#complete
 
 " Vim gutter settings
 set updatetime=100
@@ -253,11 +239,10 @@ set laststatus=2
 let g:lightline = {
   \ 'colorscheme': 'nord',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'cocstatus', 'readonly', 'relativepath', 'modified' ] ],
+  \   'left': [ ['mode', 'relativepath', 'modified', 'readonly' ],
+  \             [ 'gitbranch', 'cocstatus' ] ],
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
-  \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
   \              [ 'fileencoding', 'filetype' ]] 
   \ },
   \ 'component_function': {
@@ -279,18 +264,13 @@ let g:lightline = {
   \ },
   \}
 
-let g:lightline.component_expand = {
-      \  'linter_checking': 'lightline#ale#checking',
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
-      \ }
-let g:lightline.component_type = {
-      \     'linter_checking': 'left',
-      \     'linter_warnings': 'warning',
-      \     'linter_errors': 'error',
-      \     'linter_ok': 'left',
-      \ }
+command! LightlineReload call LightlineReload()
+
+function! LightlineReload()
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
 
 " Fast fold
 let g:fastfold_savehook = 1
@@ -386,7 +366,8 @@ noremap <leader>g :G<CR>
 inoremap <C-j> <Esc>
 
 " Get a shortcut for fixers
-nmap <leader>f <Plug>(ale_fix)
+nmap <leader>ff <Plug>(coc-format)
+vmap <leader>fs <Plug>(coc-format-selected)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -412,9 +393,9 @@ nnoremap <silent> <leader>r  :<C-u>CocList outline<cr>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" ALE quick jumps
-nmap <silent> gpe <Plug>(ale_previous_wrap)
-nmap <silent> gne <Plug>(ale_next_wrap)
+" Quick jumps
+nmap <silent> [e <Plug>(coc-diagnostic-prev)
+nmap <silent> ]e <Plug>(coc-diagnostic-next)
 
 " Nerd Tree toggle
 nnoremap <leader>t :NERDTreeToggle<CR>

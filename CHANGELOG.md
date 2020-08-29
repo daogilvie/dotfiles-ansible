@@ -8,6 +8,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ## Unreleased
 
 - fish: Starship config file added
+- neovim: Remove ALE, use only COC
 - neovim: Add emoji completion
 - neovim: Always replace the init file (with backups)
 - neovim: Disable providers I don't use
