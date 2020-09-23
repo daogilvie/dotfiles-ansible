@@ -18,6 +18,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Swap to Nord theme
 - neovim: Add ultisnips and vim-snippets
 - neovim: Add window switch movement
+- neovim: Add NERDTreeFind keybind
 
 ## [2020.04]
 

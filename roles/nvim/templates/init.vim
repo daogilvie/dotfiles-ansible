@@ -396,6 +396,8 @@ nmap <silent> ]e <Plug>(coc-diagnostic-next)
 
 " Nerd Tree toggle
 nnoremap <leader>t :NERDTreeToggle<CR>
+" And find-current
+nnoremap <leader>ft :NERDTreeFind<CR>
 
 " Fugitive git merge
 nnoremap <leader>gd :Gvdiffsplit!<CR>
