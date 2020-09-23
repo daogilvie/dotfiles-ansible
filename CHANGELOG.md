@@ -7,6 +7,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## Unreleased
 
+## [2020.09]
+
 - fish: Starship config file added
 - neovim: Remove ALE, use only COC
 - neovim: Add emoji completion
@@ -110,7 +112,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - Initial tagged version
 
-[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2020.01...HEAD
+[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2020.09...HEAD
+[2020.09]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.09
 [2020.04]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.04
 [2020.01]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.01
 [2019.12.2]: https://github.com/daogilvie/dotfiles/releases/tag/v2019.12.2
