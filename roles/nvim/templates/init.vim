@@ -220,7 +220,8 @@ augroup END
 " Splits open down and to the right, the opposites of defaults
 set splitbelow splitright
 
-" Jonhoo's Rg config
+" Adapted from Jonhoo's Rg config
+let $FZF_DEFAULT_COMMAND = 'fd -H -E .git ""'
 let g:fzf_layout = { 'down': '~20%' }
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(

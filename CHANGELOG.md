@@ -7,6 +7,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## Unreleased
 
+- neovim: Change default fzf command to include hidden files
+
 ## [2020.09]
 
 - fish: Starship config file added
