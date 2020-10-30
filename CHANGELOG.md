@@ -16,7 +16,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Disable providers I don't use
 - neovim: Add stylus plugin
 - neovim: harmonise fixers
-- neovim: Introduce FastFold for performance 
+- neovim: Introduce FastFold for performance
 - neovim: Swap to Nord theme
 - neovim: Add ultisnips and vim-snippets
 - neovim: Add window switch movement
@@ -62,14 +62,14 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Changed
 
-- neovim: leader>w now fixed, leader>s now also sends <CR>
+- neovim: `leader>w` now fixed, `leader>s` now also sends `<CR>`
 - neovim: move Files to leader--f to free C-p for word completion
 - neovim: nnoremap swap ; and : for simple ex-commands
 - neovim: Splits now open below and right
 
 ### Removed
 
-- neovim: Remove bn and bp keymaps as they conflict with iterm 
+- neovim: Remove bn and bp keymaps as they conflict with iterm
 
 ## [2019.12.2]
 
