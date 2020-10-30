@@ -353,9 +353,12 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-" Quick search with rg and Files
-noremap <leader>s :Rg<CR>
-noremap <leader>p :Files<CR>
+" Quick project-wide search with Rg and Files
+noremap <C-f> :Rg<CR>
+noremap <C-p> :Files<CR>
+noremap <leader>p :Buffers<CR>
+nnoremap <leader>sw :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>rw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Quick access to the fugitive screen
 noremap <leader>g :G<CR>
