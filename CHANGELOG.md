@@ -9,6 +9,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - neovim: Change default fzf command to include hidden files
 - neovim: Change my word search keybinds
+- neovim: Add maximizer
 
 ## [2020.09]
 

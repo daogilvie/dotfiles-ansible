@@ -81,6 +81,9 @@ Plug 'arcticicestudio/nord-vim'
 " Sessions made simple
 Plug 'tpope/vim-obsession'
 
+" Window management with maximizer
+Plug 'szw/vim-maximizer'
+
 call plug#end() " And plugins are done now!
 
 " Implied by above, but just to be explicit
