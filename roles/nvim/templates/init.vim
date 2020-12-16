@@ -360,7 +360,7 @@ nnoremap <leader>l :wincmd l<CR>
 noremap <C-f> :Rg<CR>
 noremap <C-p> :Files<CR>
 noremap <leader>p :Buffers<CR>
-nnoremap <leader>sw :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>fw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>rw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Quick access to the fugitive screen
