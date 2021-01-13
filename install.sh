@@ -13,7 +13,7 @@ python check_ans_ver.py $ANS_VER || echo "Need Ansible >= 2.4, you have $ANS_VER
 echo "*** Running the playbook"
 TAGS=""
 [[ -n "$@" ]] && echo "using tags $@" && TAGS="-t $@";
-CMD="ansible-playbook dotfiles.yml --vault-id @prompt -v -K ${TAGS}"
+CMD="ansible-playbook dotfiles.yml -i ./hosts --vault-id @prompt -v -K ${TAGS}"
 [[ -z "$ANSIBLE_COW_SELECTION" ]] && ANSIBLE_NOCOWS=1
 echo ${CMD}
 ANSIBLE_NOCOWS=$ANSIBLE_NOCOWS ${CMD}

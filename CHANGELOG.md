@@ -7,6 +7,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## Unreleased
 
+- ansible: Add hosts file to suppress implicit localhost message
 - neovim: Change default fzf command to include hidden files
 - neovim: Change my word search keybinds (twice)
 - neovim: Add maximizer
