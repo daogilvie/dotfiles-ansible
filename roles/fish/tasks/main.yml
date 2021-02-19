@@ -28,7 +28,7 @@
     dest: "{{ fish_conf }}"
     backup: yes
   loop:
-    - fishfile
+    - fish_plugins
     - conf.d
 - name: copy in starship config
   copy:
@@ -46,3 +46,7 @@
       get_url:
         url: https://git.io/fisher
         dest: "{{ fish_conf }}/functions/fisher.fish"
+    - name: Install/Update fisher packages
+      shell:
+        cmd: "fisher update"
+        executable: "{{ fish_bin }}"

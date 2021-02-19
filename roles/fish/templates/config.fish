@@ -36,11 +36,15 @@ end
 starship init fish | source
 
 # SSH Agent
-eval (ssh-agent -c) > /dev/null ^ /dev/null
+if command -sq ssh-agent
+    eval (ssh-agent -c) > /dev/null ^ /dev/null
+end
 
 # GPG Agent
-gpg-agent --daemon > /dev/null ^ /dev/null
-set -gx GPG_TTY (tty)
+if command -sq gpg-agent
+    gpg-agent --daemon > /dev/null ^ /dev/null
+    set -gx GPG_TTY (tty)
+end
 
 # We use -g not -U for fish user paths so that we can set it each time in conf
 
