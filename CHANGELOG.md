@@ -7,6 +7,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## Unreleased
 
+- all: remove pyenv config, replacing with asdf.
 - fish: remove barnybug docker from fishfile
 - ansible: Add hosts file to suppress implicit localhost message
 - neovim: Change default fzf command to include hidden files

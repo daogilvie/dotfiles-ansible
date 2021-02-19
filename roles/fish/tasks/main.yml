@@ -12,6 +12,10 @@
     name: "{{ ansible_user_id }}"
     shell: "{{ fish_bin }}"
   become: yes
+- name: Ensure Config directory exists
+  file:
+    path: "{{ fish_conf }}"
+    state: directory
 - name: Template in main config
   template:
     src: "{{ role_path }}/templates/config.fish"
@@ -33,10 +37,12 @@
     backup: yes
     force: yes
 - name: Install fisher if not present
-  get_url:
-    url: https://git.io/fisher
-    dest: "{{ fish_conf }}/functions/fisher.fish"
-- name: Install fishfile packages
-  shell: fisher
-  args:
-    executable: "{{ fish_bin }}"
+  block:
+    - name: Ensure functions dir exists
+      file:
+        path: "{{ fish_conf }}/functions"
+        state: directory
+    - name: fetch fisher function file fff
+      get_url:
+        url: https://git.io/fisher
+        dest: "{{ fish_conf }}/functions/fisher.fish"

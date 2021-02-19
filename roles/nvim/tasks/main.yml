@@ -12,9 +12,14 @@
         url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         dest: "{{ nvim_autoload_dir }}"
 - name: template in config
-  template:
-    src: "{{ role_path }}/templates/init.vim"
-    dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
-    backup: yes
+  block:
+    - name: ensure directory exists
+      file:
+        path: "{{ ansible_env.HOME }}/.config/nvim"
+        state: directory
+    - template:
+        src: "{{ role_path }}/templates/init.vim"
+        dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
+        backup: yes
 - name: run PlugInstall and PlugUpdate
   shell: nvim --headless +PlugInstall +PlugUpdate +qa
