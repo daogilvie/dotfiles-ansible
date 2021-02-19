@@ -96,7 +96,7 @@ colorscheme nord
 let g:loaded_ruby_provider = 0
 let g:loaded_perl_provider = 0
 let g:loaded_python_provider = 0 " disables python 2
-let g:python3_host_prog = '{{ ansible_env.HOME  }}/.pyenv/versions/neovim3/bin/python'
+let g:python3_host_prog = '{{ ansible_env.HOME  }}/.config/nvim/neovim_venv/bin/python'
 
 " Customise nerd commenter
 let g:NERDSpaceDelims=1

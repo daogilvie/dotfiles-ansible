@@ -4,6 +4,7 @@
     name: "{{ item }}"
     state: latest
   loop:
+    - asdf
     - exa
     - ripgrep
     - the_silver_searcher

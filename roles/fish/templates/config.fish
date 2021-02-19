@@ -21,15 +21,15 @@ set -g -x GOPATH ~/go
 # Disable virtualenv's default ugly prompt.
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
-# Invoke pyenv and  pyenv-virtualenv
-if command -sq pyenv
-    status --is-interactive; and source (pyenv init -|psub)
-    status --is-interactive; and source (pyenv virtualenv-init -|psub)
-end
-
 # Hook direnv if present
 if command -sq direnv
     direnv hook fish | source
+end
+
+# Hook in asdf if present
+if command -sq asdf
+    set -g -x ASDF_DIR (brew --prefix asdf)
+    source (brew --prefix asdf)/asdf.fish
 end
 
 # Activate starship prompt

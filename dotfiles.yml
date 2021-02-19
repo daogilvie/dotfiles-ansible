@@ -5,6 +5,5 @@
       - { role: cli, tags: [cli] }
       - { role: git, tags: [git, cli] }
       - { role: nvim, tags: [nvim, cli] }
-      - { role: pyenv, tags: [pyenv, cli] }
       - { role: editorconfig, tags: [editorconfig] }
       - { role: jupyter, tags: [jupyter] }
