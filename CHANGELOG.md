@@ -7,6 +7,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## Unreleased
 
+- cli: add fd package
 - fish: Update fishfile package names
 - all: remove pyenv config, replacing with asdf.
 - all: add tasks to ensure config dirs exist
