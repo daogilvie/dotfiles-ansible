@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/).
 
-## Unreleased
+## [2021.03]
 
 - fish: Add ssh-add -q -A for the agent
 - cli: Add gnupg
@@ -126,7 +126,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - Initial tagged version
 
-[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2020.09...HEAD
+[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2021.03...HEAD
+[2021.03]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.03
 [2020.09]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.09
 [2020.04]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.04
 [2020.01]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.01
