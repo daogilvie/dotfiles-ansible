@@ -45,6 +45,7 @@ starship init fish | source
 # SSH Agent
 if command -sq ssh-agent
     eval (ssh-agent -c) > /dev/null ^ /dev/null
+    ssh-add -q -A
 end
 
 # GPG Agent
