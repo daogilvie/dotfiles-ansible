@@ -30,6 +30,13 @@ end
 if command -sq asdf
     set -g -x ASDF_DIR (brew --prefix asdf)
     source (brew --prefix asdf)/asdf.fish
+    # Conditional integration of asdf + direnv
+    if asdf plugin list | grep -q direnv
+        asdf exec direnv hook fish | source
+        function direnv
+            asdf exec direnv $argv
+        end
+    end
 end
 
 # Activate starship prompt
