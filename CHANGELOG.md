@@ -7,6 +7,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## Unreleased
 
+- cli: Add gnupg
 - fish: Add asdf direnv integration
 - git: Add asdf and direnv ignores
 - cli: Add fd package
