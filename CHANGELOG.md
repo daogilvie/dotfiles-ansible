@@ -7,6 +7,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## Unreleased
 
+- git: Add asdf and direnv ignores
 - cli: add fd package
 - fish: Update fishfile package names
 - all: remove pyenv config, replacing with asdf.
