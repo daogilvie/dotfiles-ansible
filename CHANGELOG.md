@@ -13,36 +13,62 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [2021.03]
 
+### Added
+
 - fish: Add ssh-add -q -A for the agent
 - cli: Add gnupg
 - fish: Add asdf direnv integration
 - git: Add asdf and direnv ignores
 - cli: Add fd package
+- all: Add tasks to ensure config dirs exist
+- ansible: Add hosts file to suppress implicit localhost message
+- neovim: Add maximizer
+
+### Changed
+
 - fish: Update fishfile package names
 - all: Remove pyenv config, replacing with asdf.
-- all: Add tasks to ensure config dirs exist
-- fish: Remove barnybug docker from fishfile
-- ansible: Add hosts file to suppress implicit localhost message
 - neovim: Change default fzf command to include hidden files
 - neovim: Change my word search keybinds (twice)
-- neovim: Add maximizer
+
+### Removed
+
+- fish: Remove barnybug docker from fishfile
 
 ## [2020.09]
 
+### Added
+
 - fish: Starship config file added
-- neovim: Remove ALE, use only COC
 - neovim: Add emoji completion
-- neovim: Always replace the init file (with backups)
-- neovim: Disable providers I don't use
 - neovim: Add stylus plugin
-- neovim: harmonise fixers
 - neovim: Introduce FastFold for performance
-- neovim: Swap to Nord theme
 - neovim: Add ultisnips and vim-snippets
 - neovim: Add window switch movement
 - neovim: Add NERDTreeFind keybind
 
+### Changed
+
+- neovim: Always replace the init file (with backups)
+- neovim: Disable providers I don't use
+- neovim: harmonise fixers
+- neovim: Swap to Nord theme
+
+### Removed
+
+- neovim: Remove ALE, use only COC
+
 ## [2020.04]
+
+### Added
+
+- neovim: tpope/vim-surround plugin
+- neovim: Asciidoctor plugin and example settings
+- neovim: Yaml fold plugin
+- neovim: colorcolumn at 80
+- git: Add Session.vim to global ignore
+- git: Add publish alias
+- fish: Add nvses abbreviation
 
 ### Changed
 
@@ -59,16 +85,6 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - neovim: Set spelllang to en_gb
 - neovim: Change wildmenu to move onto longest match
 - neovim: Modify lightline elements to include git branch
-
-### Added
-
-- neovim: tpope/vim-surround plugin
-- neovim: Asciidoctor plugin and example settings
-- neovim: Yaml fold plugin
-- neovim: colorcolumn at 80
-- git: Add Session.vim to global ignore
-- git: Add publish alias
-- fish: Add nvses abbreviation
 
 ## [2020.01]
 
