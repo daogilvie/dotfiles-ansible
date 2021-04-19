@@ -11,6 +11,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - git: add .vim to global ignore file
 
+### Removed
+
+- git: requirements.in removed from global ignore file
+
 ## [2021.03]
 
 ### Added
