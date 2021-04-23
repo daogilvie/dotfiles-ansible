@@ -10,6 +10,9 @@ command -v ansible-playbook > /dev/null || { echo "Please install Ansible 2.4 or
 ANS_VER=$(ansible --version | head -n 1 | cut -d' ' -f 2)
 python check_ans_ver.py $ANS_VER || echo "Need Ansible >= 2.4, you have $ANS_VER"
 
+echo "*** Installing community.general collection"
+ansible-galaxy collection install community.general
+
 echo "*** Running the playbook"
 TAGS=""
 [[ -n "$@" ]] && echo "using tags $@" && TAGS="-t $@";

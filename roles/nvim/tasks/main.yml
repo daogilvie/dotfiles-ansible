@@ -1,8 +1,8 @@
 ---
 - name: install neovim
-  package:
+  community.general.homebrew:
     name: neovim
-    state: latest
+    state: head
 - name: install vim-plug
   block:
     - file:
@@ -13,13 +13,27 @@
         dest: "{{ nvim_autoload_dir }}"
 - name: template in config
   block:
-    - name: ensure directory exists
+    - name: ensure directories exist
       file:
-        path: "{{ ansible_env.HOME }}/.config/nvim"
+        path: "{{ ansible_env.HOME }}/{{ item }}"
         state: directory
-    - template:
+      loop:
+        - .config/nvim
+        - .config/nvim/plugin
+    - name: template init.vim 
+      template:
         src: "{{ role_path }}/templates/init.vim"
         dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
+        backup: yes
+    - name: template core options
+      template:
+        src: "{{ role_path }}/templates/core_options.vim"
+        dest: "{{ ansible_env.HOME }}/.config/nvim/plugin/core_options.vim"
+        backup: yes
+    - name: copy in plugin files 
+      copy:
+        src: "plugin"
+        dest: "{{ ansible_env.HOME }}/.config/nvim/"
         backup: yes
 - name: run PlugInstall and PlugUpdate
   shell: nvim --headless +PlugInstall +PlugUpdate +qa
