@@ -10,6 +10,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Added
 
 - git: add .vim to global ignore file
+- nvim: quickfix navigation keybinds
 
 ### Removed
 

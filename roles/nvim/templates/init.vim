@@ -420,3 +420,7 @@ nmap zuz <Plug>(FastFoldUpdate)
 
 " Emojify
 nnoremap <leader>el :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
+
+" Quickfix navigation
+nnoremap <C-k> :cnext<CR>zz
+nnoremap <C-j> :cprev<CR>zz
