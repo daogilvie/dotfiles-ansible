@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/).
 
+## [Unreleased]
+
+## [2021.04.1]
+
+### Changed
+
+- nvim: Stopped disabling open-in-split C-X for telescope
+
+### Fixed
+
+- nvim: changed clashing keybind for delete-then-paste
+- Tweaked out-of-date readme
+
 ## [2021.04]
 
 ### Added
@@ -158,7 +171,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - Initial tagged version
 
-[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2021.04...HEAD
+[Unreleased]: https://github.com/daogilvie/dotfiles/compare/v2021.04.1...HEAD
+[2021.04.1]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.04.1
 [2021.04]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.04
 [2021.03]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.03
 [2020.09]: https://github.com/daogilvie/dotfiles/releases/tag/v2020.09

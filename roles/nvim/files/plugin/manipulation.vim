@@ -2,7 +2,7 @@
 nnoremap <leader>el :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
 
 " Primeagen and asbjornHaland's 'Greatest remaps ever'
-vnoremap <leader>p "_dP
+vnoremap <leader>P "_dP
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
