@@ -7,6 +7,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- nvim: Can't use non-recursive mappings with \<Plug\> commands
+
 ## [2021.04.1]
 
 ### Changed

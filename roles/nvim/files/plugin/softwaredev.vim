@@ -1,5 +1,5 @@
 " Remap for rename current word
-nnoremap <leader>rn <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 
 " Get a shortcut for fixers
 nmap <leader>ff <Plug>(coc-format)
