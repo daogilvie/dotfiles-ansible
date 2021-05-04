@@ -79,6 +79,7 @@ Plug 'iloginow/vim-stylus'
 Plug 'pprovost/vim-ps1'
 Plug 'tmhedberg/SimpylFold'
 Plug 'fatih/vim-go'
+Plug 'evanleck/vim-svelte'
 
 " Git stuff
 Plug 'airblade/vim-gitgutter'

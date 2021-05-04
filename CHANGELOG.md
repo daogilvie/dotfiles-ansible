@@ -7,6 +7,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- nvim: Plugin evanleck/vim-svelte
+
 ### Fixed
 
 - nvim: Can't use non-recursive mappings with \<Plug\> commands
