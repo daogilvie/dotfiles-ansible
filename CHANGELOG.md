@@ -10,6 +10,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Added
 
 - nvim: Plugin evanleck/vim-svelte
+- cli: gpg config
 
 ### Fixed
 

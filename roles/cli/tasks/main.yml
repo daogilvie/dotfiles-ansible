@@ -16,3 +16,14 @@
     - fzf
     - fd
     - gnupg
+    - pinentry-mac
+
+- name: add gpg-agent config
+  copy:
+    src: "{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.gnupg/{{ item }}"
+    backup: yes
+  loop:
+    - gpg-agent.conf
+    - gpg.conf
+
