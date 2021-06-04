@@ -11,6 +11,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - nvim: Plugin evanleck/vim-svelte
 - nvim: Plugin tpope/vim-rhubarb
+- nvim: Plugin tpope/vim-dispatch
 - cli: gpg config
 
 ### Fixed

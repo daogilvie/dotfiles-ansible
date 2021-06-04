@@ -57,6 +57,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ } "
 Plug 'Shougo/echodoc.vim' " show docs in the bottom area
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-dispatch'
 
 " Snippets
 Plug 'sirver/ultisnips'
