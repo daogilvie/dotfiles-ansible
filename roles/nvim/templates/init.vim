@@ -84,6 +84,7 @@ Plug 'evanleck/vim-svelte'
 " Git stuff
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'ruanyl/vim-gh-line'
 Plug 'junegunn/gv.vim'
 
