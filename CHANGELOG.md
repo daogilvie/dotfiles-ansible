@@ -27,6 +27,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - Ansible: version checker now handles new [core X.X.X] format
 - nvim: Can't use non-recursive mappings with \<Plug\> commands
 
+### Removed
+
+- fish: jethrokuan/z plugin (replaced by zoxide)
+
 ## [2021.04.1]
 
 ### Changed
