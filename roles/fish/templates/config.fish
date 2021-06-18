@@ -39,6 +39,11 @@ if command -sq asdf
     end
 end
 
+# Hook in zoxide if present
+if command -sq zoxide
+    zoxide init fish | source
+end
+
 # Activate starship prompt
 starship init fish | source
 

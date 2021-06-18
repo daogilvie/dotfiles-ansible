@@ -9,6 +9,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Added
 
+- fish: use zoxide if present
 - nvim: Plugin evanleck/vim-svelte
 - nvim: Plugin tpope/vim-rhubarb
 - nvim: Plugin tpope/vim-dispatch
