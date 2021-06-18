@@ -9,12 +9,17 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Added
 
+- cli: new packages choose-rust, zoxide, dust
 - fish: use zoxide if present
 - nvim: Plugin evanleck/vim-svelte
 - nvim: Plugin tpope/vim-rhubarb
 - nvim: Plugin tpope/vim-dispatch
 - nvim: Plugin tpope/vim-unimpaired
 - cli: gpg config
+
+### Changed
+
+- cli: packages now supplied as list from defaults in role
 
 ### Fixed
 

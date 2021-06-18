@@ -1,22 +1,8 @@
 ---
 - name: install cli tools
   package:
-    name: "{{ item }}"
+    name: "{{ packages }}"
     state: latest
-  loop:
-    - asdf
-    - exa
-    - ripgrep
-    - the_silver_searcher
-    - fzy
-    - jq
-    - entr
-    - boxes
-    - ranger
-    - fzf
-    - fd
-    - gnupg
-    - pinentry-mac
 
 - name: add gpg-agent config
   copy:

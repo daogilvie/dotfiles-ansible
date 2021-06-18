@@ -1,0 +1,18 @@
+---
+packages:
+  - asdf
+  - exa
+  - ripgrep
+  - the_silver_searcher
+  - fzy
+  - jq
+  - entr
+  - boxes
+  - ranger
+  - fzf
+  - fd
+  - gnupg
+  - pinentry-mac
+  - choose-rust
+  - dust
+  - zoxide
