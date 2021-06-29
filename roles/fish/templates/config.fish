@@ -49,13 +49,13 @@ starship init fish | source
 
 # SSH Agent
 if command -sq ssh-agent
-    eval (ssh-agent -c) > /dev/null ^ /dev/null
+    eval (ssh-agent -c) &> /dev/null
     ssh-add -q -A
 end
 
 # GPG Agent
 if command -sq gpg-agent
-    gpg-agent --daemon > /dev/null ^ /dev/null
+    gpg-agent --daemon &> /dev/null
     set -gx GPG_TTY (tty)
 end
 

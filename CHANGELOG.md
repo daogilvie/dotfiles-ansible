@@ -23,6 +23,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Fixed
 
+- fish: config.fish /dev/null redirects work in 3.3.0
 - Ansible: clean up install script lint errors
 - Ansible: version checker now handles new [core X.X.X] format
 - nvim: Can't use non-recursive mappings with \<Plug\> commands
