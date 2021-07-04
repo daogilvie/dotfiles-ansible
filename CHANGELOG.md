@@ -20,6 +20,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Changed
 
 - cli: packages now supplied as list from defaults in role
+- nvim adapt telescope to new options structure (changelog 922)
 
 ### Fixed
 
