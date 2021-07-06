@@ -19,6 +19,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Changed
 
+- fish: refreshed github tokens
 - cli: packages now supplied as list from defaults in role
 - nvim adapt telescope to new options structure (changelog 922)
 
@@ -32,6 +33,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Removed
 
 - fish: jethrokuan/z plugin (replaced by zoxide)
+- fish: unused personal github token
 
 ## [2021.04.1]
 

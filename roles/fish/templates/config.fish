@@ -10,7 +10,6 @@ set -g -x PAGER less
 # Configure Homebrew's github token
 set -g -x HOMEBREW_GITHUB_API_TOKEN "{{ homebrew_github }}"
 set -g -x GITHUB_USER daogilvie
-set -g -x GITHUB_TOKEN "{{ daogilvie_github }}"
 
 # Set Java home *shudder*
 set -g -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/
