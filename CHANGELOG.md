@@ -22,6 +22,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - fish: refreshed github tokens
 - cli: packages now supplied as list from defaults in role
 - nvim adapt telescope to new options structure (changelogs 922 & 839)
+- nvim: Tweak search bindings
 
 ### Fixed
 

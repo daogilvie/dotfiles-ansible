@@ -23,7 +23,8 @@ inoremap <right> <nop>
 noremap <C-f> :lua require('telescope.builtin').live_grep() <CR>
 noremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 noremap <leader>p :lua require('telescope.builtin').buffers()<CR>
-nnoremap <leader>fw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
+nnoremap <leader>sw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
+nnoremap <leader>s :lua require('telescope.builtin').grep_string { search = vim.fn.input("Rg> "), use_regex = true }<CR>
 nnoremap <leader>rw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Code-based navigations, like definition, references, outline etc
