@@ -20,9 +20,9 @@
       loop:
         - .config/nvim
         - .config/nvim/plugin
-    - name: template init.vim 
-      template:
-        src: "{{ role_path }}/templates/init.vim"
+    - name: copy in init.vim 
+      copy:
+        src: "init.vim"
         dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
         backup: yes
     - name: template core options
