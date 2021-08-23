@@ -59,12 +59,14 @@ Plug 'Shougo/echodoc.vim' " show docs in the bottom area
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-dispatch'
 
-" Snippets
+" Snippets and generators
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'kkoomen/vim-doge'
 
 " Quality-of-life improvements
 Plug 'Konfekt/FastFold'
+Plug 'romainl/vim-qf'
 
 " Language specific things
 Plug 'dag/vim-fish'

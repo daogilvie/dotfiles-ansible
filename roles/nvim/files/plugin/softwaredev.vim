@@ -53,3 +53,16 @@ let g:NERDSpaceDelims=1
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDCommentEmptyLines = 1
+
+" Snippet config
+let g:ultisnips_python_style = 'google'
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+" DoGe config options!
+let g:doge_mapping = '<leader>D'
+let g:doge_mapping_comment_jump_forward = '<leader><tab>'
+let g:doge_mapping_comment_jump_backward = '<leader><s-tab>'
+let g:doge_doc_standard_python = 'google'
