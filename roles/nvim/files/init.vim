@@ -84,6 +84,7 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'fatih/vim-go'
 Plug 'evanleck/vim-svelte'
 Plug 'hashivim/vim-terraform'
+Plug 'ziglang/zig.vim'
 
 " Git stuff
 Plug 'airblade/vim-gitgutter'

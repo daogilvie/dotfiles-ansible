@@ -19,6 +19,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - nvim: Doge and snippet config
 - nvim: Add tpope's unimpaired (mainly for conflict marker objects)
 - nvim: Add terraform
+- nvim: Add zig
 
 ### Changed
 
