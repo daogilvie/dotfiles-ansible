@@ -16,6 +16,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - nvim: Plugin tpope/vim-dispatch
 - nvim: Plugin tpope/vim-unimpaired
 - cli: gpg config
+- nvim: Doge and snippet config
+- nvim: Add tpope's unimpaired (mainly for conflict marker objects)
 
 ### Changed
 

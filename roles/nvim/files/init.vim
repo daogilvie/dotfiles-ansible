@@ -100,6 +100,9 @@ Plug 'arcticicestudio/nord-vim'
 " Sessions made simple
 Plug 'tpope/vim-obsession'
 
+" Movement commands
+Plug 'tpope/vim-unimpaired'
+
 " Window management with maximizer
 Plug 'szw/vim-maximizer'
 
