@@ -83,6 +83,7 @@ Plug 'pprovost/vim-ps1'
 Plug 'tmhedberg/SimpylFold'
 Plug 'fatih/vim-go'
 Plug 'evanleck/vim-svelte'
+Plug 'hashivim/vim-terraform'
 
 " Git stuff
 Plug 'airblade/vim-gitgutter'
