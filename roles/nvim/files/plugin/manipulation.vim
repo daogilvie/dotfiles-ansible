@@ -10,6 +10,3 @@ nnoremap <leader>Y gg"+yG
 " More black hole deletion
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
-
-" Undotree toggle
-nnoremap <leader>u :UndotreeShow<CR>

@@ -41,6 +41,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - fish: jethrokuan/z plugin (replaced by zoxide)
 - fish: unused personal github token
+- nvim: UndoTree — I just never use it.
 
 ## [2021.04.1]
 
