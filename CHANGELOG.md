@@ -20,6 +20,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - nvim: Add tpope's unimpaired (mainly for conflict marker objects)
 - nvim: Add terraform
 - nvim: Add zig
+- nvim: Binding for telescope file explorer
 
 ### Changed
 
