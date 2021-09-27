@@ -18,11 +18,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Restrict modelines, not that I use them much
 Plug 'ciaranm/securemodelines'
 
-" Convenience for changing surrounds
+" Convenience for changing surrounds and comments
 Plug 'tpope/vim-surround'
-
-" Commenting is better with nerd commenter
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " And trees are better with nerdtree
 Plug 'scrooloose/nerdtree'
@@ -58,6 +56,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'Shougo/echodoc.vim' " show docs in the bottom area
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-dispatch'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " Snippets and generators
 Plug 'sirver/ultisnips'

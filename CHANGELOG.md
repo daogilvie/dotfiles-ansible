@@ -23,6 +23,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Changed
 
+- nvim: Swap nerd commenter for vim commentary (also ts-context-commentstring)
 - nvim: init.vim now not a template
 - fish: refreshed github tokens
 - cli: packages now supplied as list from defaults in role
