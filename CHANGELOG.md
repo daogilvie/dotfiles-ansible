@@ -30,6 +30,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - cli: packages now supplied as list from defaults in role
 - nvim adapt telescope to new options structure (changelogs 922 & 839)
 - nvim: Tweak search bindings
+- nvim: Swap back to fzf from fzy, and add basic multi-select to telescope
+- cli: Swap back to fzf from fzy
 
 ### Fixed
 

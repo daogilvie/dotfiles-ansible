@@ -14,7 +14,7 @@ comma-separated.
 | Role             | Tags           | Description                                                                        |
 | ---------------- | -------------- | ---------------------------------------------------------------------------------- |
 | **fish**         | `fish`         | Installs [fish shell][fish], plus some config, then installs and executes [fisher] |
-| **cli**          | `cli`          | Installs [asdf], [exa], [entr], [ripgrep], [ag], [rg], [fzy], [jq] and [boxes]     |
+| **cli**          | `cli`          | Installs [asdf], [exa], [entr], [ripgrep], [ag], [rg], [fzf], [jq] and [boxes]     |
 | **git**          | `git`, `cli`   | Installs git and sets up some configuration                                        |
 | **nvim**         | `nvim`, `cli`  | Installs [neovim] with config, and runs [PlugInstall][vim-plug]                    |
 | **editorconfig** | `editorconfig` | Places a root [editorconfig] file into the home directory                          |
@@ -28,7 +28,7 @@ comma-separated.
 [ripgrep]: https://github.com/BurntSushi/ripgrep
 [ag]: https://github.com/ggreer/the_silver_searcher
 [rg]: https://github.com/BurntSushi/ripgrep
-[fzy]: https://github.com/jhawthorn/fzy
+[fzf]: https://github.com/junegunn/fzf
 [jq]: https://stedolan.github.io/jq/
 [neovim]: https://neovim.io/
 [vim-plug]: https://github.com/junegunn/vim-plug

@@ -1,5 +1,25 @@
 lua << EOF
 local actions = require('telescope.actions')
+local action_state = require("telescope.actions.state")
+
+local custom_actions = {}
+
+--- multi-select enabled cleverness
+-- similar to fzf.
+-- Taken from https://github.com/nvim-telescope/telescope.nvim/issues/416#issuecomment-841273053
+-- Possible entry-point to learning lua and contrib?
+function custom_actions.fzf_multi_select(prompt_bufnr)
+    local picker = action_state.get_current_picker(prompt_bufnr)
+    local num_selections = table.getn(picker:get_multi_selection())
+
+    if num_selections > 1 then
+        actions.send_selected_to_qflist(prompt_bufnr)
+        actions.open_qflist()
+    else
+        actions.file_edit(prompt_bufnr)
+    end
+end
+
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {
@@ -47,16 +67,21 @@ require('telescope').setup{
     mappings = {
       i = {
           ["<C-q>"] = actions.send_to_qflist,
+          ["<tab>"] = actions.toggle_selection + actions.move_selection_next,
+          ["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
+          ["<cr>"] = custom_actions.fzf_multi_select
+      },
+      n = {
+          ["<C-q>"] = actions.send_to_qflist,
+          ["<tab>"] = actions.toggle_selection + actions.move_selection_next,
+          ["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
+          ["<cr>"] = custom_actions.fzf_multi_select
       },
     }
   },
   extensions = {
-    fzy_native = {
-      override_generic_sorter = false,
-      override_file_sorter = true,
-    }
   }
 }
-require('telescope').load_extension('fzy_native')
+require('telescope').load_extension('fzf')
 EOF
 

@@ -1,3 +1,3 @@
 # CLI role
 
-Installs exa, rg, ag, fzy, jq, tree and pv
+Installs exa, rg, ag, fzf, jq, tree and pv
