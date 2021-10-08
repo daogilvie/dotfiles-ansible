@@ -6,15 +6,19 @@ local custom_actions = {}
 
 --- multi-select enabled cleverness
 -- similar to fzf.
--- Taken from https://github.com/nvim-telescope/telescope.nvim/issues/416#issuecomment-841273053
+-- Adapted from https://github.com/nvim-telescope/telescope.nvim/issues/416#issuecomment-841273053
 -- Possible entry-point to learning lua and contrib?
+-- Adapted to do cwd on filebrowser
 function custom_actions.fzf_multi_select(prompt_bufnr)
     local picker = action_state.get_current_picker(prompt_bufnr)
     local num_selections = table.getn(picker:get_multi_selection())
-
+    
     if num_selections > 1 then
         actions.send_selected_to_qflist(prompt_bufnr)
         actions.open_qflist()
+    elseif picker.cwd ~= nil then
+        -- This is a filebrower?
+        actions.select_default(prompt_bufnr)
     else
         actions.file_edit(prompt_bufnr)
     end

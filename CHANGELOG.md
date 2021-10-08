@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/).
 
+## [2021.10.1]
+
+### Fixed
+
+- nvim: custom action works with file_browser dir switch
+
 ## [2021.10]
 
 ### Added
@@ -210,7 +216,8 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - Initial tagged version
 
-[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2021.10...HEAD
+[unreleased]: https://github.com/daogilvie/dotfiles/compare/v2021.10.1...HEAD
+[2021.10.1]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.10.1
 [2021.10]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.10
 [2021.04.1]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.04.1
 [2021.04]: https://github.com/daogilvie/dotfiles/releases/tag/v2021.04
