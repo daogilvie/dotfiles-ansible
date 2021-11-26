@@ -58,3 +58,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Split window when editing snippets
 let g:UltiSnipsEditSplit="vertical"
+
+" Biscuits. Toggle here because option doesn't seem to work
+highlight BiscuitColor ctermfg=cyan
+nnoremap <leader>bb :lua require('nvim-biscuits').toggle_biscuits()<CR>

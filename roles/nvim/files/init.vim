@@ -38,6 +38,9 @@ Plug 'itchyny/lightline.vim'
 " Treesitter for AST magic
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" and use treesitter for biscuits!
+Plug 'code-biscuits/nvim-biscuits'
+
 " Telescope for all the searchy listy goodness
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
