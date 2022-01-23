@@ -11,6 +11,9 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 - nvim: Add everything needed for nvim biscuits
 
+### Changed
+
+- nvim: Telescope file browser now a separate plugin
 ## [2021.10.1]
 
 ### Fixed
