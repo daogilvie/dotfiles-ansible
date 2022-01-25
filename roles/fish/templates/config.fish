@@ -49,7 +49,7 @@ starship init fish | source
 # SSH Agent
 if command -sq ssh-agent
     eval (ssh-agent -c) &> /dev/null
-    ssh-add -q -A
+    ssh-add -q --apple-load-keychain
 end
 
 # GPG Agent
