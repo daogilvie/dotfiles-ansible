@@ -22,7 +22,7 @@ Plug 'ciaranm/securemodelines'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
-" And trees are better with nerdtree
+" netrw trees are better with nerdtree... maybe?
 Plug 'scrooloose/nerdtree'
 
 " Use rooter to identify project roots for relative paths
@@ -54,7 +54,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ } "
-Plug 'Shougo/echodoc.vim' " show docs in the bottom area
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-dispatch'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -77,7 +76,6 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'stephpy/vim-yaml'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pangloss/vim-javascript'
-Plug 'habamax/vim-asciidoctor'
 Plug 'iloginow/vim-stylus'
 Plug 'pprovost/vim-ps1'
 Plug 'tmhedberg/SimpylFold'
@@ -104,8 +102,5 @@ Plug 'tpope/vim-obsession'
 
 " Movement commands
 Plug 'tpope/vim-unimpaired'
-
-" Window management with maximizer
-Plug 'szw/vim-maximizer'
 
 call plug#end() " And plugins are done now!

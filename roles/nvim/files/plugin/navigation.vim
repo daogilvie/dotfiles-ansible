@@ -43,8 +43,6 @@ nmap <silent> ]e <Plug>(coc-diagnostic-next)
 " Quickfix and loclist navigation
 nnoremap ]q :cnext<CR>zz
 nnoremap [q :cprev<CR>zz
-nnoremap <C-k> :lnext<CR>zz
-nnoremap <C-j> :lprev<CR>zz
 
 " Folds
 nnoremap zuz <Plug>(FastFoldUpdate)

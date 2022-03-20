@@ -48,12 +48,6 @@ augroup end
 " gh copies the line
 let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
 
-" Customise nerd commenter
-let g:NERDSpaceDelims=1
-let g:NERDDefaultAlign = 'left'
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDCommentEmptyLines = 1
-
 " Snippet config
 let g:ultisnips_python_style = 'google'
 let g:UltiSnipsExpandTrigger="<c-l>"

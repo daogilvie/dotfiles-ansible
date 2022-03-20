@@ -16,6 +16,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - nvim: Telescope file browser now a separate plugin
 - fish: Change out deprecated ssh-add -A flag (monterey)
 
+### Removed
+
+- nvim: Several plugins and config items I don't use
+
 ## [2021.10.1]
 
 ### Fixed
