@@ -14,6 +14,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 ### Changed
 
 - nvim: Telescope file browser now a separate plugin
+- nvim: Treesitter now installs all plugins
 - fish: Change out deprecated ssh-add -A flag (monterey)
 
 ### Removed
