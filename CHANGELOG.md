@@ -13,6 +13,7 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ### Changed
 
+- nvim: Remove emoji completion in favour of coc-emoji
 - nvim: Telescope file browser now a separate plugin
 - nvim: Treesitter now installs all plugins
 - fish: Change out deprecated ssh-add -A flag (monterey)

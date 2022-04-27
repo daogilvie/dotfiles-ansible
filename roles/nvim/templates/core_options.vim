@@ -5,9 +5,6 @@ colorscheme nord
 
 let mapleader = "\<SPACE>"
 
-" Emoji completion
-set completefunc=emoji#complete
-
 " Vim gutter settings
 set updatetime=100
 "
