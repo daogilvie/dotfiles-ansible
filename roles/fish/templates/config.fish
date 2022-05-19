@@ -26,9 +26,13 @@ if command -sq direnv
 end
 
 # Hook in asdf if present
+if test -d ~/.asdf
+    source ~/.asdf/asdf.fish
+    if ! test -L ./.config/fish/completions/asdf.fish
+        mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+    end
+end
 if command -sq asdf
-    set -g -x ASDF_DIR (brew --prefix asdf)
-    source (brew --prefix asdf)/asdf.fish
     # Conditional integration of asdf + direnv
     if asdf plugin list | grep -q direnv
         asdf exec direnv hook fish | source
