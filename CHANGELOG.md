@@ -19,6 +19,10 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 - fish: Change out deprecated ssh-add -A flag (monterey)
 - fish/cli: asdf removed from brew packages, uses local clone
 
+### Fixed
+
+- nvim: Lightline config uses FugitiveHead now
+
 ### Removed
 
 - nvim: Several plugins and config items I don't use
